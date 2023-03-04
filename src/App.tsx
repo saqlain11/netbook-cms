@@ -6,15 +6,16 @@ import * as contentful  from 'contentful'
 
 function App() {
   const client = contentful.createClient({
-    space: '0hdacipw488j',
-    environment: 'master', // defaults to 'master' if not set
-    accessToken: 'vKFubvegKsOtpfdJbq25nmhgZ2DdaNUNw2yXMl-g6R0'
+    space: `${import.meta.env.VITE_CONTENTFUL_SPACE}` ,
+    environment: `${import.meta.env.VITE_CONTENTFUL_ENVIRONMENT}`, // defaults to 'master' if not set
+    accessToken: `${import.meta.env.VITE_CONTENTFUL_ACCESS_TOKEN}`
   })
   
   client.getEntries({"content_type":"navigation"})
   .then((entry) => console.log(entry))
   .catch(console.error)
   const [count, setCount] = useState(0)
+  console.log("here",);
 
   return (
     <div className="App">
