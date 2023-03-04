@@ -1,24 +1,23 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
-import * as contentful  from 'contentful'
-
+import { useState } from "react";
+import reactLogo from "./assets/react.svg";
+import "./App.css";
+import ContentfulClient from "@netbook/contentful-client/client";
+import * as contentful from "contentful";
+import { Button } from "@netbook/components";
 
 function App() {
-  const client = contentful.createClient({
-    space: `${import.meta.env.VITE_CONTENTFUL_SPACE}` ,
-    environment: `${import.meta.env.VITE_CONTENTFUL_ENVIRONMENT}`, // defaults to 'master' if not set
-    accessToken: `${import.meta.env.VITE_CONTENTFUL_ACCESS_TOKEN}`
-  })
-  
-  client.getEntries({"content_type":"navigation"})
-  .then((entry) => console.log(entry))
-  .catch(console.error)
-  const [count, setCount] = useState(0)
-  console.log("here",);
+  const client: contentful.ContentfulClientApi = new ContentfulClient().client;
+  client
+    .getEntries({ content_type: "navigation" })
+    .then((entry) => console.log(entry))
+    .catch(console.error);
+  const [count, setCount] = useState(0);
+  console.log("here");
 
   return (
+   
     <div className="App">
+       <Button/>
       <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src="/vite.svg" className="logo" alt="Vite logo" />
@@ -40,7 +39,7 @@ function App() {
         Click on the Vite and React logos to learn more
       </p>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
