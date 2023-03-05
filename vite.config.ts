@@ -7,7 +7,7 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      '@netbook': path.resolve(__dirname, './src'),
+      "@netbook": path.resolve(__dirname, "./src"),
     },
   },
 });
