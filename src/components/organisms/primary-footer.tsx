@@ -2,7 +2,7 @@ import Facebook from "@netbook/assets/facebook.svg";
 import Instagram from "@netbook/assets/instagram.svg";
 import Linkedin from "@netbook/assets/linkedin.svg";
 import NetbookLogo from "@netbook/assets/netbook-logo.svg";
-import Twitter from "@netbook/assets/Twitter.svg";
+import Twitter from "@netbook/assets/twitter.svg";
 import { Col, Row, Space, Typography, Layout } from "antd";
 import { Link } from "react-router-dom";
 
