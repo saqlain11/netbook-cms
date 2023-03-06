@@ -5,14 +5,15 @@ import NetbookLogo from "@netbook/assets/netbook-logo.svg";
 import Twitter from "@netbook/assets/twitter.svg";
 import { Col, Row, Space, Typography, Layout } from "antd";
 import { Link } from "react-router-dom";
+import styles from "./primary-footer.module.scss";
 
 const { Footer } = Layout;
 const PrimaryFooter: React.FC = () => {
   return (
-    <Footer style={{ backgroundColor: "#20202D", color: "#fff" }}>
+    <Footer className={styles["primary-footer"]}>
       <Row align="middle" justify="space-between">
         <Col>
-          <Typography.Text style={{ color: "#fff" }}>
+          <Typography.Text className={styles["all-reserved"]}>
             Besnik Creative Agency.
           </Typography.Text>
         </Col>
