@@ -1,9 +1,9 @@
-import { Affix,  Layout } from "antd";
+import { Affix, Layout, Row } from "antd";
 import StickyHeader from "./sticky-header";
 import { Outlet } from "react-router-dom";
 import { useRef } from "react";
 import PrimaryFooter from "./primary-footer";
-const {  Content } = Layout;
+const { Content } = Layout;
 
 const BaseLayout: React.FC = () => {
   const headerRef = useRef<HTMLDivElement>(null);
@@ -15,10 +15,10 @@ const BaseLayout: React.FC = () => {
       <Content>
         <Outlet />
       </Content>
-      {/* scondary-footer */}
-      
+      {/* secondary-footer */}
+      <Row></Row>
       {/* primary-footer */}
-     <PrimaryFooter/>
+      <PrimaryFooter />
     </Layout>
   );
 };
