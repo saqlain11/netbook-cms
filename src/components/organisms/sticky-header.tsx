@@ -5,7 +5,7 @@ import { SearchOutlined } from "@ant-design/icons";
 import { Col, Divider, Layout, Menu, Row, Space, Input, Button } from "antd";
 
 const { Header } = Layout;
-const StickyHeader: React.FC = forwardRef((_, ref) => {
+const StickyHeader: React.FC = forwardRef<HTMLDivElement>((_, ref) => {
   return (
     <div ref={ref}>
       <Header className={styles["sticky-header"]}>
@@ -27,7 +27,7 @@ const StickyHeader: React.FC = forwardRef((_, ref) => {
               />
             </Space>
           </Col>
-          <Col span={8}>
+          <Col span={5}>
             <Space>
               <Input
                 size="large"

@@ -1,0 +1,26 @@
+.community-banner {
+  padding: 0 135px;
+  background-image: linear-gradient(to left, #d4e7fe, #ffffff);
+  .description {
+    padding-top: 64px;
+    .heading {
+      color: #0a093d;
+    }
+    .type {
+      animation: blink 0.5s step-end infinite alternate;
+      border-right: 3px solid;
+      font-family: monospace;
+      @keyframes blink {
+        50% {
+          border-color: transparent;
+        }
+      }
+    }
+  }
+  .community-actions {
+    margin: 40px 0px;
+  }
+  .socializing {
+    object-fit: contain;
+  }
+}

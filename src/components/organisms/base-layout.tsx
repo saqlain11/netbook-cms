@@ -1,12 +1,12 @@
-import { Affix, Col, Layout, Row, Space, Typography } from "antd";
+import { Affix,  Layout } from "antd";
 import StickyHeader from "./sticky-header";
 import { Outlet } from "react-router-dom";
-import NetbookLogo from "@netbook/assets/netbook-logo.svg";
 import { useRef } from "react";
-const { Footer, Content } = Layout;
+import PrimaryFooter from "./primary-footer";
+const {  Content } = Layout;
 
 const BaseLayout: React.FC = () => {
-  const headerRef = useRef(null);
+  const headerRef = useRef<HTMLDivElement>(null);
   return (
     <Layout>
       <Affix>
@@ -15,22 +15,10 @@ const BaseLayout: React.FC = () => {
       <Content>
         <Outlet />
       </Content>
-      <Footer style={{ backgroundColor: "#20202D", color: "#fff" }}>
-        {/* primary-footer */}
-        <Row align="middle" justify="space-between">
-          <Col>
-            <Typography.Text style={{ color: "#fff" }}>
-              Besnik Creative Agency.
-            </Typography.Text>
-          </Col>
-          <Col>
-            <NetbookLogo color="#fff" />
-          </Col>
-          <Col>
-            <Space></Space>
-          </Col>
-        </Row>
-      </Footer>
+      {/* scondary-footer */}
+      
+      {/* primary-footer */}
+     <PrimaryFooter/>
     </Layout>
   );
 };

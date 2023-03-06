@@ -1,6 +1,6 @@
 import React from "react";
 
-const NetbookLogo: React.FC = ({ color = "#2B2B39" }) => {
+const NetbookLogo: React.FC<{ color?: string }> = ({ color = "#2B2B39" }) => {
   return (
     <svg
       width="143"
