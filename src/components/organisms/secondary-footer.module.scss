@@ -1,0 +1,25 @@
+.secondary-footer {
+  background-color: #2b2b39;
+  padding: 70px 135px;
+  color: #ffffff;
+  .link-label {
+    font-size: 20px;
+    color: #ffffff;
+  }
+  .link {
+    color: #e7e7e7;
+  }
+  .subscription-heading {
+    margin: 0;
+    font-size: 20px;
+    color: #fff;
+  }
+  .subscription-text {
+    color: #e7e7e7;
+    margin: 18px 0;
+  }
+  .subscription-control {
+    width: calc(100% - 100px);
+    color: #ffffff;
+  }
+}

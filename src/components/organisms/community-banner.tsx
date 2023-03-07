@@ -7,7 +7,11 @@ const CommunityBanner: React.FC = () => {
     <Row className={styles["community-banner"]} justify="space-between">
       <Col className={styles["description"]} span={8}>
         <Space direction="vertical">
-          <Button type="primary" size="large">
+          <Button
+            type="primary"
+            size="large"
+            className={styles["community-button"]}
+          >
             Netbook community
           </Button>
           <Typography.Title
@@ -21,8 +25,11 @@ const CommunityBanner: React.FC = () => {
             Your Solutions For Community!
           </Typography.Title>
 
-          <Typography.Text className={styles["type"]} data-aos="zoom-out"
-             type="secondary">
+          <Typography.Text
+            className={styles["type"]}
+            data-aos="zoom-out"
+            type="secondary"
+          >
             More than 2 billion people in over countries use socibook to stay in
             touch with friends & family.
           </Typography.Text>
@@ -31,7 +38,9 @@ const CommunityBanner: React.FC = () => {
           <Button type="primary" size="large">
             About More
           </Button>
-          <Button size="large">Invite Friend</Button>
+          <Button size="large" className={styles["community-invite"]}>
+            Invite Friend
+          </Button>
         </Space>
       </Col>
       <Col span={12}>
