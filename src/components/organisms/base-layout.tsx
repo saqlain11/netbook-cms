@@ -71,9 +71,16 @@ const BaseLayout: React.FC = () => {
               email
             </Typography.Text>
             <Input.Group compact>
-      <Input style={{ width: 'calc(100% - 200px)',backgroundColor:"transparent",color:"#fff" }} defaultValue="https://ant.design" />
-      <Button>Submit</Button>
-    </Input.Group>
+              <Input
+                style={{
+                  width: "calc(100% - 200px)",
+                  backgroundColor: "transparent",
+                  color: "#fff",
+                }}
+                defaultValue="https://ant.design"
+              />
+              <Button>Submit</Button>
+            </Input.Group>
           </Space>
         </Col>
       </Row>

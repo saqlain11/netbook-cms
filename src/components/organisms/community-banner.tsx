@@ -10,11 +10,19 @@ const CommunityBanner: React.FC = () => {
           <Button type="primary" size="large">
             Netbook community
           </Button>
-          <Typography.Title className={styles["heading"]} level={1}>
+          <Typography.Title
+            data-aos="zoom-in"
+            data-aos-offset="200"
+            data-aos-delay="100"
+            data-aos-duration="1000"
+            className={styles["heading"]}
+            level={1}
+          >
             Your Solutions For Community!
           </Typography.Title>
 
-          <Typography.Text className={styles["type"]} type="secondary">
+          <Typography.Text className={styles["type"]} data-aos="zoom-out"
+             type="secondary">
             More than 2 billion people in over countries use socibook to stay in
             touch with friends & family.
           </Typography.Text>
@@ -28,6 +36,14 @@ const CommunityBanner: React.FC = () => {
       </Col>
       <Col span={12}>
         <Image
+          data-aos="fade-left"
+          data-aos-offset="200"
+          data-aos-delay="50"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out"
+          data-aos-mirror="true"
+          data-aos-once="true"
+          data-aos-anchor-placement="top-center"
           alt="socializing"
           className={styles["socializing"]}
           src={Socializing}
