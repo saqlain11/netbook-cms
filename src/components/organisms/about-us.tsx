@@ -3,27 +3,39 @@ import React from "react";
 import Laptop from "@netbook/assets/about-us-img-1.png";
 import Cable from "@netbook/assets/about-us-img-2.png";
 import { PlayCircleTwoTone } from "@ant-design/icons";
+import styles from "./about-us.module.scss"
 
 const AboutUs: React.FC = () => {
   return (
     <Row
       justify="space-between"
-      style={{ padding: "0 135px", backgroundColor: "#FFFFFF" }}
+      className={styles["about-us"]}
     >
-      <Col style={{ marginTop: "80px" }} span={9}>
+      <Col
+        data-aos="zoom-out"
+        data-aos-offset="200"
+        data-aos-delay="50"
+        data-aos-duration="1000"
+        data-aos-easing="ease-in-out"
+        data-aos-mirror="true"
+        data-aos-once="true"
+        data-aos-anchor-placement="top-center"
+        span={9}
+        className={styles["about-netbook"]}
+      >
         <Space direction="vertical">
-          <Typography.Text style={{ color: "#217BF4" }}>
+          <Typography.Text className={styles["why-netbook"]}>
             Why Netbooks?
           </Typography.Text>
-          <Typography.Title level={2} style={{ marginTop: 0 }}>
+          <Typography.Title level={2} className={styles["join-netbook"]}>
             Why Join to Netbook Social Network?
           </Typography.Title>
-          <Typography.Paragraph type="secondary" style={{ marginTop: 0 }}>
+          <Typography.Paragraph type="secondary">
             Recent surveys have indicated that small businesses recognise the
             need they have to connect with consumer.
           </Typography.Paragraph>
         </Space>
-        <Space direction="vertical" style={{ marginTop: "36px" }}>
+        <Space direction="vertical" >
           <Typography.Text strong>
             <PlayCircleTwoTone /> Groups
           </Typography.Text>
@@ -39,23 +51,45 @@ const AboutUs: React.FC = () => {
       </Col>
       <Col span={12}>
         <Row justify="space-between" align="middle">
-          <Col span={12}>
+          <Col
+            data-aos="zoom-in"
+            data-aos-offset="200"
+            data-aos-delay="50"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-out"
+            data-aos-mirror="true"
+            data-aos-once="true"
+            data-aos-anchor-placement="top-center"
+            span={12}
+          >
             <iframe
-              style={{ borderRadius: "10px" }}
+              className={styles["netbook-asset"]}
               width="100%"
               height="400px"
-              src="https://www.youtube.com/embed/tgbNymZ7vqY"
+              src="https://www.youtube.com/embed/ML9EMYggyEE"
             ></iframe>
           </Col>
-          <Col span={12}>
-            <Space style={{ margin: "30px" }} direction="vertical">
+          <Col
+            data-aos="zoom-in"
+            data-aos-offset="200"
+            data-aos-delay="50"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-out"
+            data-aos-mirror="true"
+            data-aos-once="true"
+            data-aos-anchor-placement="top-center"
+            span={12}
+          >
+            <Space className={styles["netbook-about-us-image"]} direction="vertical">
               <Image
-                style={{ borderRadius: "10px", width: "100%", height: "220px" }}
+                alt="laptop"
+              className={styles["about-image-banner"]}
                 src={Laptop}
                 preview={false}
               />
               <Image
-                style={{ borderRadius: "10px", width: "100%", height: "220px" }}
+                alt="cable"
+                className={styles["about-image-banner"]}
                 src={Cable}
                 preview={false}
               />

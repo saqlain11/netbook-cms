@@ -11,9 +11,11 @@ const BaseLayout: React.FC = () => {
   const headerRef = useRef<HTMLDivElement>(null);
   return (
     <Layout>
+      {/* stick-header */}
       <Affix>
         <StickyHeader ref={headerRef} />
       </Affix>
+      {/* content */}
       <Content>
         <Outlet />
       </Content>
