@@ -31,7 +31,7 @@ const PrimaryFooter: React.FC = () => {
             <Link target="_blank" to="https://www.facebook.com">
               <Facebook />
             </Link>
-            <Link target="_blank" to="https://www.linedin.com">
+            <Link target="_blank" to="https://www.linkedin.com">
               <Linkedin />
             </Link>
           </Space>

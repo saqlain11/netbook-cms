@@ -1,9 +1,10 @@
-import { CommunityBanner } from "@netbook/components";
+import { CommunityBanner, AboutUs } from "@netbook/components";
 
 const Home: React.FC = () => {
   return (
     <>
       <CommunityBanner />
+      <AboutUs />
     </>
   );
 };
