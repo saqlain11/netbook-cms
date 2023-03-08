@@ -1,0 +1,3 @@
+const STATIC_TEXT={
+
+}
