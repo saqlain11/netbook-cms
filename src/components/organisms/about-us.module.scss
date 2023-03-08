@@ -1,28 +1,27 @@
-.about-us{
- padding:0 135px;
- background-color: #ffffff;
- .about-netbook{
+.about-us {
+  padding: 0 135px;
+  background-color: #ffffff;
+  .about-netbook {
     margin-top: 80px;
-    .why-netbook{
-        color: #217BF4
+    .why-netbook {
+      color: #217bf4;
     }
-    .join-netbook{
-        margin-top: 0
+    .join-netbook {
+      margin-top: 0;
     }
-    .connect{
-        margin-top: "36px"
+    .connect {
+      margin-top: "36px";
     }
- }
- .netbook-asset{
-border-radius: 10px
- }
- .netbook-about-us-image{
-  
+  }
+  .netbook-asset {
+    border-radius: 10px;
+  }
+  .netbook-about-us-image {
     margin: 30px;
-    .about-image-banner{
-        @extend .netbook-asset;
-        width: 100%;
-         height: 220px;
+    .about-image-banner {
+      @extend .netbook-asset;
+      width: 100%;
+      height: 220px;
     }
- }
+  }
 }

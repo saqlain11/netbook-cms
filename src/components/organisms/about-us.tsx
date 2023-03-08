@@ -3,14 +3,11 @@ import React from "react";
 import Laptop from "@netbook/assets/about-us-img-1.png";
 import Cable from "@netbook/assets/about-us-img-2.png";
 import { PlayCircleTwoTone } from "@ant-design/icons";
-import styles from "./about-us.module.scss"
+import styles from "./about-us.module.scss";
 
 const AboutUs: React.FC = () => {
   return (
-    <Row
-      justify="space-between"
-      className={styles["about-us"]}
-    >
+    <Row justify="space-between" className={styles["about-us"]}>
       <Col
         data-aos="zoom-out"
         data-aos-offset="200"
@@ -35,7 +32,7 @@ const AboutUs: React.FC = () => {
             need they have to connect with consumer.
           </Typography.Paragraph>
         </Space>
-        <Space direction="vertical" >
+        <Space direction="vertical">
           <Typography.Text strong>
             <PlayCircleTwoTone /> Groups
           </Typography.Text>
@@ -80,10 +77,13 @@ const AboutUs: React.FC = () => {
             data-aos-anchor-placement="top-center"
             span={12}
           >
-            <Space className={styles["netbook-about-us-image"]} direction="vertical">
+            <Space
+              className={styles["netbook-about-us-image"]}
+              direction="vertical"
+            >
               <Image
                 alt="laptop"
-              className={styles["about-image-banner"]}
+                className={styles["about-image-banner"]}
                 src={Laptop}
                 preview={false}
               />

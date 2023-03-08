@@ -1,3 +1,4 @@
-const STATIC_TEXT={
-
-}
+const STATIC_TEXT = {
+  anything: "anything",
+};
+export default STATIC_TEXT;
