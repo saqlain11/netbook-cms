@@ -7,44 +7,47 @@ import {
   ArrowRightOutlined,
   GithubOutlined,
 } from "@ant-design/icons";
+import STATIC_TEXT from "@netbook/__Fixtures__/ui-static-text";
 
 const Achievement: React.FC = () => {
+  const {
+    HOME: { ACHIEVEMENT },
+  } = STATIC_TEXT;
+  const { RATING, REWARDS, OUR_ACHIEVEMENT } = ACHIEVEMENT;
   return (
-    <Row justify="space-between" className={styles["achievement"]}>
+    <Row
+      justify="space-between"
+      className={`${styles["achievement"]} px-135 py-48 `}
+    >
       {/* rating */}
       <Col span={7}>
         <Card hoverable>
           <Space direction="vertical">
-            <Space className={styles["achievement-heading"]}>
-              <StarTwoTone className={styles["achievement-icon"]} spin={true} />
+            <Space className="mb-24">
+              <StarTwoTone className={styles["achievement-icon"]} />
               <Typography.Text className={styles["achievement-text"]}>
-                4.8 Rating
+                {RATING.NO_OF_RATING}
               </Typography.Text>
             </Space>
             <Space className={styles["achievement-meta"]}>
               <Avatar.Group size="small">
-                <Avatar src="https://joesch.moe/api/v1/random?key=1" />
-                <Avatar src="https://joesch.moe/api/v1/random?key=2">K</Avatar>
-                <Avatar src="https://joesch.moe/api/v1/random?key=3" />
+                {RATING.USERS.map((user, userIndex) => (
+                  <Avatar key={userIndex} src={user} />
+                ))}
               </Avatar.Group>
-
               <Typography.Text
                 className={styles["achievement-meta-text"]}
                 strong
               >
-                +836k
+                {RATING.NO_OF_MEMBERS}
               </Typography.Text>
-              <Typography.Text>Members</Typography.Text>
+              <Typography.Text>{RATING.MEMBERS}</Typography.Text>
             </Space>
-            <Typography.Paragraph
-              type="secondary"
-              className={styles["achievement-description"]}
-            >
-              More than 2 billion we people over countries use socibooks we to
-              stay in touch with friends.
+            <Typography.Paragraph type="secondary" className="mt-32">
+              {RATING.RATING_DESCRIPTION}
             </Typography.Paragraph>
             <Typography.Link className={styles["achievement-action-animate"]}>
-              Join Our Community{" "}
+              {RATING.CTA.JOIN_COMMUNITY}{" "}
               <ArrowRightOutlined className={styles["animate-on-hover"]} />
             </Typography.Link>
           </Space>
@@ -54,33 +57,29 @@ const Achievement: React.FC = () => {
       <Col span={7}>
         <Card hoverable>
           <Space direction="vertical">
-            <Space className={styles["achievement-heading"]}>
+            <Space className="mb-24">
               <TrophyTwoTone className={styles["achievement-icon"]} />
               <Typography.Text className={styles["achievement-text"]}>
-                Awwwards
+                {REWARDS.TITLE}
               </Typography.Text>
             </Space>
             <Space className={styles["achievement-meta"]}>
               <GithubOutlined className={styles["achievement-meta-icon"]} />
-              <Typography.Text>Best of</Typography.Text>
+              <Typography.Text>{REWARDS.BEST}</Typography.Text>
 
               <Typography.Text
                 className={styles["achievement-meta-text"]}
                 strong
               >
-                2021
+                {REWARDS.YEARS}
               </Typography.Text>
-              <Typography.Text>Members</Typography.Text>
+              <Typography.Text>{REWARDS.MEMBER}</Typography.Text>
             </Space>
-            <Typography.Paragraph
-              type="secondary"
-              className={styles["achievement-description"]}
-            >
-              More than 2 billion we people over countries use socibooks we to
-              stay in touch with friends.
+            <Typography.Paragraph type="secondary" className="mt-32">
+              {REWARDS.AWARDS_DESCRIPTION}
             </Typography.Paragraph>
             <Typography.Link className={styles["achievement-action-animate"]}>
-              Go To Awards{" "}
+              {REWARDS.CTA.GO_TO_AWARDS}{" "}
               <ArrowRightOutlined className={styles["animate-on-hover"]} />
             </Typography.Link>
           </Space>
@@ -99,25 +98,24 @@ const Achievement: React.FC = () => {
         span={8}
       >
         <Space direction="vertical">
-          <Typography.Text style={{ color: "#217bf4" }}>
-            Our Achievement
+          <Typography.Text className={styles["about-achievement"]}>
+            {OUR_ACHIEVEMENT.TITLE}
           </Typography.Text>
           <Typography.Title
             level={2}
-            style={{ marginTop: 0, color: "#0A093D" }}
+            className={`${styles["about-achievement-heading"]} mt-none`}
           >
-            We are Connecting You The Digital Life.
+            {OUR_ACHIEVEMENT.CONNECTING_DIGITAL}
           </Typography.Title>
-          <Typography.Paragraph type="secondary" style={{ marginTop: "10px" }}>
-            The scope the Social Media becomes crucial Is helps the business to
-            directly engage with their needs and wants.
+          <Typography.Paragraph type="secondary" className="mt-10">
+            {OUR_ACHIEVEMENT.SCOPE_OF_MEDIA}
           </Typography.Paragraph>
           <Button
             className={styles["achievement-action-animate"]}
             type="primary"
             size="large"
           >
-            Discover me{" "}
+            {OUR_ACHIEVEMENT.CTA.DISCOVER_ME}{" "}
             <ArrowRightOutlined className={styles["animate-on-hover"]} />
           </Button>
         </Space>
