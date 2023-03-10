@@ -1,27 +1,39 @@
 import { forwardRef } from "react";
 import styles from "./sticky-header.module.scss";
 import NetbookLogo from "@netbook/assets/netbook-logo.svg";
-import { SearchOutlined } from "@ant-design/icons";
+import { SearchOutlined, DownOutlined } from "@ant-design/icons";
 import { Col, Divider, Layout, Menu, Row, Space, Input, Button } from "antd";
+import STATIC_TEXT from "@netbook/__Fixtures__/ui-static-text";
+import { Link } from "react-router-dom";
 
 const { Header } = Layout;
 const StickyHeader = forwardRef<HTMLDivElement>((_, ref) => {
+  const {
+    HEADER: { NAVIGATION,CTA },
+  } = STATIC_TEXT;
   return (
     <div ref={ref}>
       <Header className={`${styles["sticky-header"]} px-135`}>
         <Row justify="space-between">
           <Col span={12}>
             <Space>
-              <NetbookLogo />
+              <Link to="/">
+                <NetbookLogo />
+              </Link>
               <Menu
                 className={`${styles["header-nav"]} ml-16`}
                 mode="horizontal"
                 defaultSelectedKeys={["1"]}
-                items={new Array(4).fill(null).map((_, index) => {
-                  const key = index + 1;
+                items={NAVIGATION.map((nav) => {
                   return {
-                    key,
-                    label: `nav ${key}`,
+                    key: nav.key,
+                    label: (
+                      <Link className={styles["header-nav-link"]} to={nav.link}>
+                        {nav.label}
+                      
+                       </Link>
+                    ),
+                    children: nav.children,
                   };
                 })}
               />
@@ -35,7 +47,7 @@ const StickyHeader = forwardRef<HTMLDivElement>((_, ref) => {
                 placeholder="Search here"
               />
               <Button size="large" type="primary">
-                Login
+                {CTA.LOGIN}
               </Button>
             </Space>
           </Col>

@@ -8,6 +8,12 @@
     var(--background-white)
   );
   .header-nav {
-    width: 40vh;
+    width: 50vh;
+    .header-nav-link {
+      color: var(--color-gray);
+      &:hover {
+        color: var(--background-dark-gray);
+      }
+    }
   }
 }

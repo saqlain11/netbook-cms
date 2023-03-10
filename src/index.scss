@@ -15,9 +15,3 @@ svg {
   display: flex;
 }
 
-.ant-menu-horizontal > .ant-menu-item::after,
-.ant-menu-horizontal > .ant-menu-submenu::after {
-  color: #656464;
-  border-bottom: none !important;
-  transition: none !important;
-}
