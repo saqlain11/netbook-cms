@@ -2,18 +2,25 @@ import Socializing from "@netbook/assets/socializing.png";
 import { Col, Row, Image, Button, Typography, Space } from "antd";
 import React from "react";
 import styles from "./community-banner.module.scss";
+import STATIC_TEXT from "@netbook/__Fixtures__/ui-static-text";
 const CommunityBanner: React.FC = () => {
+  const {
+    HOME: { COMMUNITY },
+  } = STATIC_TEXT;
   return (
-    <Row className={styles["community-banner"]} justify="space-between">
+    <Row
+      className={`${styles["community-banner"]} px-135`}
+      justify="space-between"
+    >
       {/* community-solution */}
-      <Col className={styles["description"]} span={8}>
+      <Col className={`${styles["description"]} pt-64`} span={8}>
         <Space direction="vertical">
           <Button
             type="primary"
             size="large"
             className={styles["community-button"]}
           >
-            Netbook community
+            {COMMUNITY.NETBOOK_COMMUNITY}
           </Button>
           <Typography.Title
             data-aos="zoom-in"
@@ -23,7 +30,7 @@ const CommunityBanner: React.FC = () => {
             className={styles["heading"]}
             level={1}
           >
-            Your Solutions For Community!
+            {COMMUNITY.NETBOOK_SOLUTION}
           </Typography.Title>
 
           <Typography.Text
@@ -31,16 +38,15 @@ const CommunityBanner: React.FC = () => {
             data-aos="zoom-out"
             type="secondary"
           >
-            More than 2 billion people in over countries use socibook to stay in
-            touch with friends & family.
+            {COMMUNITY.NETBOOK_COMMUNITY_SURVEY}
           </Typography.Text>
         </Space>
-        <Space className={styles["community-actions"]}>
+        <Space className="my-80">
           <Button type="primary" size="large">
-            About More
+            {COMMUNITY.CTA.ABOUT_MORE}
           </Button>
           <Button size="large" className={styles["community-invite"]}>
-            Invite Friend
+            {COMMUNITY.CTA.INVITE_FRIEND}
           </Button>
         </Space>
       </Col>
@@ -57,7 +63,6 @@ const CommunityBanner: React.FC = () => {
             data-aos-once="true"
             data-aos-anchor-placement="top-center"
             alt="socializing"
-            className={styles["socializing"]}
             src={Socializing}
             preview={false}
           />

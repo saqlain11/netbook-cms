@@ -35,10 +35,9 @@ const AboutUs: React.FC = () => {
           </Typography.Paragraph>
         </Space>
         <Space direction="vertical" className="mt-40">
-          {ABOUT_US.NETBOOK_SHARING.map((platform,platformIndex) => (
+          {ABOUT_US.NETBOOK_SHARING.map((platform, platformIndex) => (
             <Typography.Text strong key={platformIndex}>
-              <PlayCircleTwoTone spin={true} />{" "}
-              {platform}
+              <PlayCircleTwoTone spin={true} /> {platform}
             </Typography.Text>
           ))}
         </Space>

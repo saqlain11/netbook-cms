@@ -1,10 +1,14 @@
 .community-banner {
   padding: 0 135px;
-  background-image: linear-gradient(to left, #d4e7fe, #ffffff);
+  background-image: linear-gradient(
+    to left,
+    var(--background-light-blue),
+    var(--background-white)
+  );
+
   .description {
-    padding-top: 64px;
     .heading {
-      color: #0a093d;
+      color: var(--color-dark-blue);
     }
     .type {
       animation: blink 0.5s step-end infinite alternate;
@@ -12,24 +16,18 @@
       font-family: monospace;
       @keyframes blink {
         50% {
-          border-color: transparent;
+          border-color: var(--border-transparent);
         }
       }
     }
   }
-  .community-actions {
-    margin: 40px 0px;
-  }
   .community-button {
-    color: #217bf4;
-    background-color: #217bf41a;
+    color: var(--color-blue);
+    background-color: var(--background-blue-alpha);
   }
   .community-invite {
-    color: #217bf4;
-    background-color: transparent;
-    border: 1px solid #217bf4;
-  }
-  .socializing {
-    object-fit: contain;
+    color: var(--color-blue);
+    background-color: var(--background-transparent);
+    border: 1px solid var(--border-blue);
   }
 }
