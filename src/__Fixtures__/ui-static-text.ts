@@ -1,4 +1,19 @@
 const STATIC_TEXT = {
-  anything: "anything",
-};
+  HEADER:{
+    NAVIGATION:{
+
+    } 
+  },
+  HOME:{
+    COMMUNITY:{
+      
+    }
+  },
+  FOOTER:{
+    FOOTER_LINK:{
+
+    }
+  }
+ 
+} as const;
 export default STATIC_TEXT;
