@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 const { Header } = Layout;
 const StickyHeader = forwardRef<HTMLDivElement>((_, ref) => {
   const {
-    HEADER: { NAVIGATION,CTA },
+    HEADER: { NAVIGATION, CTA },
   } = STATIC_TEXT;
   return (
     <div ref={ref}>
@@ -30,8 +30,7 @@ const StickyHeader = forwardRef<HTMLDivElement>((_, ref) => {
                     label: (
                       <Link className={styles["header-nav-link"]} to={nav.link}>
                         {nav.label}
-                      
-                       </Link>
+                      </Link>
                     ),
                     children: nav.children,
                   };

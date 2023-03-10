@@ -1,13 +1,15 @@
 import { Col, Row, Space, Typography, Image } from "antd";
 import React from "react";
-import Laptop from "@netbook/assets/about-us-img-1.png";
-import Cable from "@netbook/assets/about-us-img-2.png";
 import { PlayCircleTwoTone } from "@ant-design/icons";
 import styles from "./about-us.module.scss";
+import STATIC_TEXT from "@netbook/__Fixtures__/ui-static-text";
 
 const AboutUs: React.FC = () => {
+  const {
+    HOME: { ABOUT_US },
+  } = STATIC_TEXT;
   return (
-    <Row justify="space-between" className={styles["about-us"]}>
+    <Row justify="space-between" className={`${styles["about-us"]} px-135`}>
       {/* why-netbooks */}
       <Col
         data-aos="zoom-out"
@@ -19,32 +21,26 @@ const AboutUs: React.FC = () => {
         data-aos-once="true"
         data-aos-anchor-placement="top-center"
         span={9}
-        className={styles["about-netbook"]}
+        className={`${styles["about-netbook"]} mt-80`}
       >
         <Space direction="vertical">
           <Typography.Text className={styles["why-netbook"]}>
-            Why Netbooks?
+            {ABOUT_US.WHY_NETBOOKS}
           </Typography.Text>
-          <Typography.Title level={2} className={styles["join-netbook"]}>
-            Why Join to Netbook Social Network?
+          <Typography.Title level={2} className="m-none">
+            {ABOUT_US.JOIN_NETBOOK}
           </Typography.Title>
           <Typography.Paragraph type="secondary">
-            Recent surveys have indicated that small businesses recognise the
-            need they have to connect with consumer.
+            {ABOUT_US.NETBOOK_SURVEY}
           </Typography.Paragraph>
         </Space>
-        <Space direction="vertical">
-          <Typography.Text strong>
-            <PlayCircleTwoTone spin={true} /> Groups
-          </Typography.Text>
-          <Typography.Text strong>
-            {" "}
-            <PlayCircleTwoTone spin={true} /> Messages
-          </Typography.Text>
-          <Typography.Text strong>
-            {" "}
-            <PlayCircleTwoTone spin={true} /> Share
-          </Typography.Text>
+        <Space direction="vertical" className="mt-40">
+          {ABOUT_US.NETBOOK_SHARING.map((platform,platformIndex) => (
+            <Typography.Text strong key={platformIndex}>
+              <PlayCircleTwoTone spin={true} />{" "}
+              {platform}
+            </Typography.Text>
+          ))}
         </Space>
       </Col>
       {/* netbooks-assets */}
@@ -65,7 +61,7 @@ const AboutUs: React.FC = () => {
               className={styles["netbook-asset"]}
               width="100%"
               height="400px"
-              src="https://www.youtube.com/embed/ML9EMYggyEE"
+              src={ABOUT_US.OUR_INTRO}
             />
           </Col>
           <Col
@@ -80,19 +76,19 @@ const AboutUs: React.FC = () => {
             span={12}
           >
             <Space
-              className={styles["netbook-about-us-image"]}
+              className={`${styles["netbook-about-us-image"]} m-32`}
               direction="vertical"
             >
               <Image
                 alt="laptop"
                 className={styles["about-image-banner"]}
-                src={Laptop}
+                src={ABOUT_US.ABOUT_IMAGE_ONE}
                 preview={false}
               />
               <Image
                 alt="cable"
                 className={styles["about-image-banner"]}
-                src={Cable}
+                src={ABOUT_US.ABOUT_IMAGE_TWO}
                 preview={false}
               />
             </Space>

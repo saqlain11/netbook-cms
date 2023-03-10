@@ -1,24 +1,14 @@
 .about-us {
-  // @extend .my-135;
-  padding: 0 135px;
   background-color: var(--background-white);
   .about-netbook {
-    margin-top: 80px;
     .why-netbook {
-      color: #217bf4;
-    }
-    .join-netbook {
-      margin-top: 0;
-    }
-    .connect {
-      margin-top: "36px";
+      color: var(--color-blue);
     }
   }
   .netbook-asset {
     border-radius: 10px;
   }
   .netbook-about-us-image {
-    margin: 30px;
     .about-image-banner {
       @extend .netbook-asset;
       width: 100%;

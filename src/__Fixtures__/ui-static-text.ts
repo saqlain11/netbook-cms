@@ -1,3 +1,5 @@
+import Laptop from "@netbook/assets/about-us-img-1.png";
+import Cable from "@netbook/assets/about-us-img-2.png";
 const STATIC_TEXT = {
   HEADER: {
     CTA: {
@@ -38,6 +40,16 @@ const STATIC_TEXT = {
   },
   HOME: {
     COMMUNITY: {},
+    ABOUT_US: {
+      WHY_NETBOOKS: "Why Netbooks?",
+      JOIN_NETBOOK: "Why Join to Netbook Social Network?",
+      NETBOOK_SURVEY:
+        "Recent surveys have indicated that small businesses recognise the need they have to connect with consumer.",
+      NETBOOK_SHARING: ["Groups", "Messages", "Share"],
+      OUR_INTRO:"https://www.youtube.com/embed/ML9EMYggyEE",
+      ABOUT_IMAGE_ONE:Laptop,
+      ABOUT_IMAGE_TWO:Cable,
+    },
   },
   FOOTER: {
     FOOTER_LINK: {},
