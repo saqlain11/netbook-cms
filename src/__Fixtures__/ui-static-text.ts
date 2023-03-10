@@ -1,5 +1,9 @@
 import Laptop from "@netbook/assets/about-us-img-1.png";
 import Cable from "@netbook/assets/about-us-img-2.png";
+import Facebook from "@netbook/assets/facebook.svg";
+import Instagram from "@netbook/assets/instagram.svg";
+import Linkedin from "@netbook/assets/linkedin.svg";
+import Twitter from "@netbook/assets/twitter.svg";
 const STATIC_TEXT = {
   HEADER: {
     CTA: {
@@ -96,7 +100,19 @@ const STATIC_TEXT = {
     },
   },
   FOOTER: {
-    FOOTER_LINK: {},
+    SECONDARY_FOOTER: {
+      FOOTER_LINK: {},
+    },
+
+    PRIMARY_FOOTER: {
+      ALL_RESERVED: "Besnik Creative Agency.",
+      SOCIAL_MEDIA: [
+        { LINK: "https://www.twitter.com", LOGO: Twitter },
+        { LINK: "https://www.instagram.com", LOGO: Instagram },
+        { LINK: "https://www.facebook.com", LOGO: Facebook },
+        { LINK: "https://www.linkedin.com", LOGO: Linkedin },
+      ],
+    },
   },
 } as const;
 export default STATIC_TEXT;
