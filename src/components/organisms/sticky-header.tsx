@@ -6,11 +6,13 @@ import { Col, Divider, Layout, Menu, Row, Space, Input, Button } from "antd";
 import STATIC_TEXT from "@netbook/__Fixtures__/ui-static-text";
 import { Link } from "react-router-dom";
 
+const {
+  header: { navigation, cta },
+} = STATIC_TEXT;
+
 const { Header } = Layout;
 const StickyHeader = forwardRef<HTMLDivElement>((_, ref) => {
-  const {
-    HEADER: { NAVIGATION, CTA },
-  } = STATIC_TEXT;
+
   return (
     <div ref={ref}>
       <Header className={`${styles["sticky-header"]} px-135`}>
@@ -24,7 +26,7 @@ const StickyHeader = forwardRef<HTMLDivElement>((_, ref) => {
                 className={`${styles["header-nav"]} ml-16`}
                 mode="horizontal"
                 defaultSelectedKeys={["1"]}
-                items={NAVIGATION.map((nav) => {
+                items={navigation.map((nav) => {
                   return {
                     key: nav.key,
                     label: (
@@ -46,7 +48,7 @@ const StickyHeader = forwardRef<HTMLDivElement>((_, ref) => {
                 placeholder="Search here"
               />
               <Button size="large" type="primary">
-                {CTA.LOGIN}
+                {cta.login}
               </Button>
             </Space>
           </Col>

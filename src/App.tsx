@@ -1,11 +1,15 @@
 import ContentfulClient from "@netbook/contentful-client/client";
 import * as contentful from "contentful";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { BaseLayout } from "@netbook/components";
-import Home from "./pages/home";
-import NotFound from "./pages/not-found";
+import { BaseLayout, Loader } from "@netbook/components";
 import AOS from "aos";
 
+import { lazy, Suspense } from "react";
+
+const Home = lazy(() => import(/* webpackChunkName: 'Home' */ "./pages/home"));
+const NotFound = lazy(
+  () => import(/* webpackChunkName: 'NotFound' */ "./pages/not-found")
+);
 AOS.init();
 AOS.init({
   // Global settings:
@@ -40,12 +44,14 @@ function App() {
 
   return (
     <Router>
-      <Routes>
-        <Route element={<BaseLayout />}>
-          <Route index element={<Home />} />
-          <Route path="*" element={<NotFound />} />
-        </Route>
-      </Routes>
+      <Suspense fallback={<Loader />}>
+        <Routes>
+          <Route element={<BaseLayout />}>
+            <Route index element={<Home />} />
+            <Route path="*" element={<NotFound />} />
+          </Route>
+        </Routes>
+      </Suspense>
     </Router>
   );
 }

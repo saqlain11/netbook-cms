@@ -3,10 +3,12 @@ import { Col, Row, Image, Button, Typography, Space } from "antd";
 import React from "react";
 import styles from "./community-banner.module.scss";
 import STATIC_TEXT from "@netbook/__Fixtures__/ui-static-text";
+
+const {
+  home: { community },
+} = STATIC_TEXT;
+
 const CommunityBanner: React.FC = () => {
-  const {
-    HOME: { COMMUNITY },
-  } = STATIC_TEXT;
   return (
     <Row
       className={`${styles["community-banner"]} px-135`}
@@ -20,7 +22,7 @@ const CommunityBanner: React.FC = () => {
             size="large"
             className={styles["community-button"]}
           >
-            {COMMUNITY.NETBOOK_COMMUNITY}
+            {community.netbookCommunity}
           </Button>
           <Typography.Title
             data-aos="zoom-in"
@@ -30,7 +32,7 @@ const CommunityBanner: React.FC = () => {
             className={styles["heading"]}
             level={1}
           >
-            {COMMUNITY.NETBOOK_SOLUTION}
+            {community.netbookSolution}
           </Typography.Title>
 
           <Typography.Text
@@ -38,15 +40,15 @@ const CommunityBanner: React.FC = () => {
             data-aos="zoom-out"
             type="secondary"
           >
-            {COMMUNITY.NETBOOK_COMMUNITY_SURVEY}
+            {community.netbookCommunitySurvey}
           </Typography.Text>
         </Space>
         <Space className="my-80">
           <Button type="primary" size="large">
-            {COMMUNITY.CTA.ABOUT_MORE}
+            {community.cta.aboutMore}
           </Button>
           <Button size="large" className={styles["community-invite"]}>
-            {COMMUNITY.CTA.INVITE_FRIEND}
+            {community.cta.inviteFriend}
           </Button>
         </Space>
       </Col>

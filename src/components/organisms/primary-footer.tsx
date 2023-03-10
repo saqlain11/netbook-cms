@@ -10,7 +10,7 @@ import STATIC_TEXT from "@netbook/__Fixtures__/ui-static-text";
 
 const { Footer } = Layout;
 const {
-  FOOTER: { PRIMARY_FOOTER },
+  footer: { primaryFooter },
 } = STATIC_TEXT;
 
 const PrimaryFooter: React.FC = () => {
@@ -19,7 +19,7 @@ const PrimaryFooter: React.FC = () => {
       <Row align="middle" justify="space-between">
         <Col>
           <Typography.Text className={styles["all-reserved"]}>
-            {PRIMARY_FOOTER.ALL_RESERVED}
+            {primaryFooter.allReserved}
           </Typography.Text>
         </Col>
         <Col>
@@ -27,9 +27,9 @@ const PrimaryFooter: React.FC = () => {
         </Col>
         <Col>
           <Space>
-            {PRIMARY_FOOTER.SOCIAL_MEDIA.map(({ LINK, LOGO }, index) => (
-              <Link key={index} target="_blank" to={LINK}>
-                <LOGO />
+            {primaryFooter.socialMedia.map(({ link, Logo }, index) => (
+              <Link key={index} target="_blank" to={link}>
+                <Logo />
               </Link>
             ))}
           </Space>

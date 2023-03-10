@@ -9,11 +9,12 @@ import {
 } from "@ant-design/icons";
 import STATIC_TEXT from "@netbook/__Fixtures__/ui-static-text";
 
+const {
+  home: { achievement },
+} = STATIC_TEXT;
+
 const Achievement: React.FC = () => {
-  const {
-    HOME: { ACHIEVEMENT },
-  } = STATIC_TEXT;
-  const { RATING, REWARDS, OUR_ACHIEVEMENT } = ACHIEVEMENT;
+  const { rating, rewards, ourAchievement } = achievement;
   return (
     <Row
       justify="space-between"
@@ -26,12 +27,12 @@ const Achievement: React.FC = () => {
             <Space className="mb-24">
               <StarTwoTone className={styles["achievement-icon"]} />
               <Typography.Text className={styles["achievement-text"]}>
-                {RATING.NO_OF_RATING}
+                {rating.noOfRating}
               </Typography.Text>
             </Space>
             <Space className={styles["achievement-meta"]}>
               <Avatar.Group size="small">
-                {RATING.USERS.map((user, userIndex) => (
+                {rating.users.map((user, userIndex) => (
                   <Avatar key={userIndex} src={user} />
                 ))}
               </Avatar.Group>
@@ -39,15 +40,15 @@ const Achievement: React.FC = () => {
                 className={styles["achievement-meta-text"]}
                 strong
               >
-                {RATING.NO_OF_MEMBERS}
+                {rating.noOfMembers}
               </Typography.Text>
-              <Typography.Text>{RATING.MEMBERS}</Typography.Text>
+              <Typography.Text>{rating.members}</Typography.Text>
             </Space>
             <Typography.Paragraph type="secondary" className="mt-32">
-              {RATING.RATING_DESCRIPTION}
+              {rating.ratingDescription}
             </Typography.Paragraph>
             <Typography.Link className={styles["achievement-action-animate"]}>
-              {RATING.CTA.JOIN_COMMUNITY}{" "}
+              {rating.cta.joinCommunity}{" "}
               <ArrowRightOutlined className={styles["animate-on-hover"]} />
             </Typography.Link>
           </Space>
@@ -60,26 +61,26 @@ const Achievement: React.FC = () => {
             <Space className="mb-24">
               <TrophyTwoTone className={styles["achievement-icon"]} />
               <Typography.Text className={styles["achievement-text"]}>
-                {REWARDS.TITLE}
+                {rewards.title}
               </Typography.Text>
             </Space>
             <Space className={styles["achievement-meta"]}>
               <GithubOutlined className={styles["achievement-meta-icon"]} />
-              <Typography.Text>{REWARDS.BEST}</Typography.Text>
+              <Typography.Text>{rewards.best}</Typography.Text>
 
               <Typography.Text
                 className={styles["achievement-meta-text"]}
                 strong
               >
-                {REWARDS.YEARS}
+                {rewards.years}
               </Typography.Text>
-              <Typography.Text>{REWARDS.MEMBER}</Typography.Text>
+              <Typography.Text>{rewards.members}</Typography.Text>
             </Space>
             <Typography.Paragraph type="secondary" className="mt-32">
-              {REWARDS.AWARDS_DESCRIPTION}
+              {rewards.awardsDescription}
             </Typography.Paragraph>
             <Typography.Link className={styles["achievement-action-animate"]}>
-              {REWARDS.CTA.GO_TO_AWARDS}{" "}
+              {rewards.cta.goToAwards}{" "}
               <ArrowRightOutlined className={styles["animate-on-hover"]} />
             </Typography.Link>
           </Space>
@@ -99,23 +100,23 @@ const Achievement: React.FC = () => {
       >
         <Space direction="vertical">
           <Typography.Text className={styles["about-achievement"]}>
-            {OUR_ACHIEVEMENT.TITLE}
+            {ourAchievement.title}
           </Typography.Text>
           <Typography.Title
             level={2}
             className={`${styles["about-achievement-heading"]} mt-none`}
           >
-            {OUR_ACHIEVEMENT.CONNECTING_DIGITAL}
+            {ourAchievement.connectingDetail}
           </Typography.Title>
           <Typography.Paragraph type="secondary" className="mt-10">
-            {OUR_ACHIEVEMENT.SCOPE_OF_MEDIA}
+            {ourAchievement.scopeOfMedia}
           </Typography.Paragraph>
           <Button
             className={styles["achievement-action-animate"]}
             type="primary"
             size="large"
           >
-            {OUR_ACHIEVEMENT.CTA.DISCOVER_ME}{" "}
+            {ourAchievement.cta.discoverMe}{" "}
             <ArrowRightOutlined className={styles["animate-on-hover"]} />
           </Button>
         </Space>

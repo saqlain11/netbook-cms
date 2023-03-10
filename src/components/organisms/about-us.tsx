@@ -4,10 +4,11 @@ import { PlayCircleTwoTone } from "@ant-design/icons";
 import styles from "./about-us.module.scss";
 import STATIC_TEXT from "@netbook/__Fixtures__/ui-static-text";
 
+const {
+  home: { aboutUs },
+} = STATIC_TEXT;
+
 const AboutUs: React.FC = () => {
-  const {
-    HOME: { ABOUT_US },
-  } = STATIC_TEXT;
   return (
     <Row justify="space-between" className={`${styles["about-us"]} px-135`}>
       {/* why-netbooks */}
@@ -25,17 +26,17 @@ const AboutUs: React.FC = () => {
       >
         <Space direction="vertical">
           <Typography.Text className={styles["why-netbook"]}>
-            {ABOUT_US.WHY_NETBOOKS}
+            {aboutUs.whyNetbooks}
           </Typography.Text>
           <Typography.Title level={2} className="m-none">
-            {ABOUT_US.JOIN_NETBOOK}
+            {aboutUs.joinNetbook}
           </Typography.Title>
           <Typography.Paragraph type="secondary">
-            {ABOUT_US.NETBOOK_SURVEY}
+            {aboutUs.netbookSurvey}
           </Typography.Paragraph>
         </Space>
         <Space direction="vertical" className="mt-40">
-          {ABOUT_US.NETBOOK_SHARING.map((platform, platformIndex) => (
+          {aboutUs.netbookSharing.map((platform, platformIndex) => (
             <Typography.Text strong key={platformIndex}>
               <PlayCircleTwoTone spin={true} /> {platform}
             </Typography.Text>
@@ -60,7 +61,7 @@ const AboutUs: React.FC = () => {
               className={styles["netbook-asset"]}
               width="100%"
               height="400px"
-              src={ABOUT_US.OUR_INTRO}
+              src={aboutUs.ourIntro}
             />
           </Col>
           <Col
@@ -81,13 +82,13 @@ const AboutUs: React.FC = () => {
               <Image
                 alt="laptop"
                 className={styles["about-image-banner"]}
-                src={ABOUT_US.ABOUT_IMAGE_ONE}
+                src={aboutUs.AboutImageOne}
                 preview={false}
               />
               <Image
                 alt="cable"
                 className={styles["about-image-banner"]}
-                src={ABOUT_US.ABOUT_IMAGE_TWO}
+                src={aboutUs.aboutImageTwo}
                 preview={false}
               />
             </Space>

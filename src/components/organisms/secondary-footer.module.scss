@@ -1,23 +1,19 @@
 .secondary-footer {
   background-color: var(--background-dark-gray);
-  padding: 70px 135px;
   color: var(--color-white);
   .link-label {
     font-size: 20px;
     color: var(--color-white);
   }
   .link {
-    padding: 10px 0;
     color: var(--color-platinum);
   }
   .subscription-heading {
-    margin: 0;
     font-size: 20px;
     color: var(--color-white);
   }
   .subscription-text {
     color: var(--color-platinum);
-    margin: 18px 0;
   }
   .subscription-control {
     width: calc(100% - 100px);
