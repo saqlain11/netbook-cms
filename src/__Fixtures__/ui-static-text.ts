@@ -168,7 +168,7 @@ const STATIC_TEXT = {
   notFound: {
     status: "404",
     description: "Sorry, the page you visited does not exist.",
-    backHome: "Back home",
+    backHome: "Back",
   },
   errorBoundary: {
     status: "500",
