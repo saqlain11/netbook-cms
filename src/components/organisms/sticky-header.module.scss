@@ -1,14 +1,13 @@
 .sticky-header {
   * & :not(:last-child) {
-    background-color: transparent;
+    background-color: var(--background-transparent);
   }
-  background-image: linear-gradient(to left, #d4e7fe, #ffffff);
-  padding: 0 135px;
-  .nav {
+  background-image: linear-gradient(
+    to left,
+    var(--background-light-blue),
+    var(--background-white)
+  );
+  .header-nav {
     width: 40vh;
-    margin-left: 2rem;
   }
-}
-.divider {
-  margin: 0;
 }

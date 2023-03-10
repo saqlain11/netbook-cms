@@ -1,4 +1,4 @@
-import React, { forwardRef } from "react";
+import { forwardRef } from "react";
 import styles from "./sticky-header.module.scss";
 import NetbookLogo from "@netbook/assets/netbook-logo.svg";
 import { SearchOutlined } from "@ant-design/icons";
@@ -8,13 +8,13 @@ const { Header } = Layout;
 const StickyHeader = forwardRef<HTMLDivElement>((_, ref) => {
   return (
     <div ref={ref}>
-      <Header className={styles["sticky-header"]}>
+      <Header className={`${styles["sticky-header"]} px-135`}>
         <Row justify="space-between">
           <Col span={12}>
             <Space>
               <NetbookLogo />
               <Menu
-                className={styles["nav"]}
+                className={`${styles["header-nav"]} ml-16`}
                 mode="horizontal"
                 defaultSelectedKeys={["1"]}
                 items={new Array(4).fill(null).map((_, index) => {
@@ -41,7 +41,7 @@ const StickyHeader = forwardRef<HTMLDivElement>((_, ref) => {
           </Col>
         </Row>
       </Header>
-      <Divider className={styles["divider"]} />
+      <Divider className="m-none" />
     </div>
   );
 });

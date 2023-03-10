@@ -1,0 +1,44 @@
+.achievement {
+  padding: 50px 135px;
+  background-color: #ffffff;
+  .achievement-heading {
+    margin-bottom: 20px;
+    .achievement-icon {
+      font-size: 20px;
+    }
+    .achievement-text {
+      font-size: 20px;
+      color: #0a093d;
+    }
+  }
+  .achievement-meta {
+    height: "30px";
+    .achievement-meta-text {
+      color: #217bf4;
+    }
+    .achievement-meta-icon {
+      color: red;
+      font-size: 20px;
+    }
+  }
+  .achievement-description {
+    margin-top: 30px;
+  }
+}
+
+.achievement-action-animate:hover {
+  .animate-on-hover {
+    animation: slideLeft 1s ease-in-out infinite;
+    margin-left: 9px;
+  }
+  @keyframes slideLeft {
+    0%,
+    100% {
+      transform: translate(0, 0);
+    }
+
+    50% {
+      transform: translate(15px, 0);
+    }
+  }
+}

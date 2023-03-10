@@ -1,0 +1,68 @@
+@use "sass:map";
+$space-sizes: (
+  "none": 0,
+  "4": 4px,
+  "8": 8px,
+  "10": 10px,
+  "12": 12px,
+  "16": 16px,
+  "24": 24px,
+  "28": 28px,
+  "32": 32px,
+  "40": 40px,
+  "48": 48px,
+  "64": 64px,
+  "80": 80px,
+  "135": 135px,
+  "auto": auto,
+);
+@each $sizes, $value in $space-sizes {
+  // margin
+  .mt-#{$sizes} {
+    margin-top: #{$value};
+  }
+  .mb-#{$sizes} {
+    margin-bottom: #{$value};
+  }
+  .ml-#{$sizes} {
+    margin-left: #{$value};
+  }
+  .mr-#{$sizes} {
+    margin-right: #{$value};
+  }
+  .mx-#{$sizes} {
+    margin-right: #{$value};
+    margin-left: #{$value};
+  }
+  .my-#{$sizes} {
+    margin-top: #{$value};
+    margin-bottom: #{$value};
+  }
+  .m-#{$sizes} {
+    margin: #{$value};
+  }
+  // padding
+  .pt-#{$sizes} {
+    padding-top: #{$value};
+  }
+  .pb-#{$sizes} {
+    padding-bottom: #{$value};
+  }
+  .pl-#{$sizes} {
+    padding-left: #{$value};
+  }
+  .pr-#{$sizes} {
+    padding-right: #{$value};
+  }
+  .px-#{$sizes} {
+    padding-right: #{$value};
+    padding-left: #{$value};
+  }
+  .py-#{$sizes} {
+    padding-top: #{$value};
+    padding-bottom: #{$value};
+  }
+  .p-#{$sizes} {
+    padding: #{$value};
+  }
+}

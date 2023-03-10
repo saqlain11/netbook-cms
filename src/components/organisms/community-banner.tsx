@@ -5,6 +5,7 @@ import styles from "./community-banner.module.scss";
 const CommunityBanner: React.FC = () => {
   return (
     <Row className={styles["community-banner"]} justify="space-between">
+      {/* community-solution */}
       <Col className={styles["description"]} span={8}>
         <Space direction="vertical">
           <Button
@@ -43,6 +44,7 @@ const CommunityBanner: React.FC = () => {
           </Button>
         </Space>
       </Col>
+      {/* community-banner */}
       <Col span={12}>
         <Space>
           <Image

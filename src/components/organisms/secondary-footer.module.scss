@@ -1,26 +1,26 @@
 .secondary-footer {
-  background-color: #2b2b39;
+  background-color: var(--background-dark-gray);
   padding: 70px 135px;
-  color: #ffffff;
+  color: var(--color-white);
   .link-label {
     font-size: 20px;
-    color: #ffffff;
+    color: var(--color-white);
   }
   .link {
     padding: 10px 0;
-    color: #e7e7e7;
+    color: var(--color-platinum);
   }
   .subscription-heading {
     margin: 0;
     font-size: 20px;
-    color: #fff;
+    color: var(--color-white);
   }
   .subscription-text {
-    color: #e7e7e7;
+    color: var(--color-platinum);
     margin: 18px 0;
   }
   .subscription-control {
     width: calc(100% - 100px);
-    color: #ffffff;
+    color: var(--color-white);
   }
 }

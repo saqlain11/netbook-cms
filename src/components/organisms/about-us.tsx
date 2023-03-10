@@ -8,6 +8,7 @@ import styles from "./about-us.module.scss";
 const AboutUs: React.FC = () => {
   return (
     <Row justify="space-between" className={styles["about-us"]}>
+      {/* why-netbooks */}
       <Col
         data-aos="zoom-out"
         data-aos-offset="200"
@@ -34,18 +35,19 @@ const AboutUs: React.FC = () => {
         </Space>
         <Space direction="vertical">
           <Typography.Text strong>
-            <PlayCircleTwoTone /> Groups
+            <PlayCircleTwoTone spin={true} /> Groups
           </Typography.Text>
           <Typography.Text strong>
             {" "}
-            <PlayCircleTwoTone /> Messages
+            <PlayCircleTwoTone spin={true} /> Messages
           </Typography.Text>
           <Typography.Text strong>
             {" "}
-            <PlayCircleTwoTone /> Share
+            <PlayCircleTwoTone spin={true} /> Share
           </Typography.Text>
         </Space>
       </Col>
+      {/* netbooks-assets */}
       <Col span={12}>
         <Row justify="space-between" align="middle">
           <Col
@@ -64,7 +66,7 @@ const AboutUs: React.FC = () => {
               width="100%"
               height="400px"
               src="https://www.youtube.com/embed/ML9EMYggyEE"
-            ></iframe>
+            />
           </Col>
           <Col
             data-aos="zoom-in"

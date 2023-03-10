@@ -1,4 +1,4 @@
-import { CommunityBanner, AboutUs } from "@netbook/components";
+import { CommunityBanner, AboutUs, Achievement } from "@netbook/components";
 
 const Home: React.FC = () => {
   return (
@@ -6,7 +6,10 @@ const Home: React.FC = () => {
       {/* community-banner */}
       <CommunityBanner />
       {/* about-us */}
+      {/*achievement*/}
+
       <AboutUs />
+      <Achievement />
     </>
   );
 };
