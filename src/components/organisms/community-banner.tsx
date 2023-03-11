@@ -50,10 +50,10 @@ const CommunityBanner: React.FC = () => {
         </Space>
         <Space className="my-80">
           <Button type="primary" size="large">
-            {community?.cta?.aboutMore ?? staticCommunity.cta.aboutMore}
+            {community.cta?.aboutMore ?? staticCommunity.cta.aboutMore}
           </Button>
           <Button size="large" className={styles["community-invite"]}>
-            {community?.cta?.inviteFriend ?? staticCommunity.cta.inviteFriend}
+            {community.cta?.inviteFriend ?? staticCommunity.cta.inviteFriend}
           </Button>
         </Space>
       </Col>

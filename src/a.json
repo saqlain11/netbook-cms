@@ -1,9 +1,9 @@
 {
-  "netbookCommunity": "Netbook community",
-  "netbookSolution": "Your Solutions For Community!",
-  "netbookCommunitySurvey": "More than 2 billion people in over countries use socibook to stay in touch with friends & family",
-  "cta": {
-    "aboutMore": "About More",
-    "inviteFriend": "Invite Friend"
-  }
+  "whyNetbooks": "Why Netbooks?",
+  "joinNetbook": "Why Join to Netbook Social Network?",
+  "netbookSurvey": "Recent surveys have indicated that small businesses recognise the need they have to connect with consumer.",
+  "netbookSharing": ["Groups", "Messages", "Share"],
+  "ourIntro": "https://www.youtube.com/embed/ML9EMYggyEE",
+  "AboutImageOne": "https://images.ctfassets.net/0hdacipw488j/685TGzkl8FlDDK%E2%80%A65dd60e594b2495592f5c62fe8b19a6/about-us-img-1.png",
+  "aboutImageTwo": "https://images.ctfassets.net/0hdacipw488j/685TGzkl8FlDDK%E2%80%A65dd60e594b2495592f5c62fe8b19a6/about-us-img-2.png"
 }

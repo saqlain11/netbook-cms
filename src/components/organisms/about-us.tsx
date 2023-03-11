@@ -1,14 +1,18 @@
 import { Col, Row, Space, Typography, Image } from "antd";
-import React from "react";
+import React, { useContext } from "react";
 import { PlayCircleTwoTone } from "@ant-design/icons";
 import styles from "./about-us.module.scss";
 import STATIC_TEXT from "@netbook/__Fixtures__/ui-static-text";
+import { HomeContext } from "@netbook/contexts";
 
 const {
-  home: { aboutUs },
+  home: { aboutUs: staticAboutUs },
 } = STATIC_TEXT;
 
 const AboutUs: React.FC = () => {
+  const {
+    homeState: { aboutUs },
+  } = useContext(HomeContext);
   return (
     <Row justify="space-between" className={`${styles["about-us"]} px-135`}>
       {/* why-netbooks */}
@@ -36,11 +40,13 @@ const AboutUs: React.FC = () => {
           </Typography.Paragraph>
         </Space>
         <Space direction="vertical" className="mt-40">
-          {aboutUs.netbookSharing.map((platform, platformIndex) => (
-            <Typography.Text strong key={platformIndex}>
-              <PlayCircleTwoTone spin={true} /> {platform}
-            </Typography.Text>
-          ))}
+          {(aboutUs?.netbookSharing ?? staticAboutUs.netbookSharing)?.map(
+            (platform: string[], platformIndex: number) => (
+              <Typography.Text strong key={platformIndex}>
+                <PlayCircleTwoTone spin={true} /> {platform}
+              </Typography.Text>
+            )
+          )}
         </Space>
       </Col>
       {/* netbooks-assets */}
@@ -61,7 +67,7 @@ const AboutUs: React.FC = () => {
               className={styles["netbook-asset"]}
               width="100%"
               height="400px"
-              src={aboutUs.ourIntro}
+              src={aboutUs.ourIntro ?? staticAboutUs.netbookSharing}
             />
           </Col>
           <Col
@@ -82,13 +88,13 @@ const AboutUs: React.FC = () => {
               <Image
                 alt="laptop"
                 className={styles["about-image-banner"]}
-                src={aboutUs.aboutImageOne}
+                src={aboutUs.aboutImageOne ?? staticAboutUs.aboutImageOne}
                 preview={false}
               />
               <Image
                 alt="cable"
                 className={styles["about-image-banner"]}
-                src={aboutUs.aboutImageTwo}
+                src={aboutUs.aboutImageTwo ?? staticAboutUs.aboutImageTwo}
                 preview={false}
               />
             </Space>

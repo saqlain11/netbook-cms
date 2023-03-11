@@ -1,5 +1,5 @@
 import { homeAction, homeInitialState, homeReducer } from "@netbook/reducers";
-import { fetchCommunity } from "@netbook/services";
+import { fetchAboutUs, fetchCommunity } from "@netbook/services";
 import { parsedEntry } from "@netbook/utils";
 import { createContext, ReactNode, useEffect, useReducer } from "react";
 
@@ -14,9 +14,15 @@ const HomeProvider = ({ children }: { children: ReactNode }) => {
     try {
       //@note we could do here promise.all settled for parallel calls
       const communityResponse = await fetchCommunity();
+      const aboutUsResponse = await fetchAboutUs();
+
       dispatch({
         type: homeAction.SET_COMMUNITY,
         data: parsedEntry(communityResponse.items),
+      });
+      dispatch({
+        type: homeAction.SET_ABOUT_US,
+        data: parsedEntry(aboutUsResponse.items),
       });
     } catch (error) {
       console.log("error", error);

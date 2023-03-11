@@ -28,7 +28,7 @@ const homeReducer = (
       return { ...state, ...data };
 
     case homeAction.SET_ABOUT_US:
-      return { ...state, aboutUs: data };
+      return { ...state, ...data };
 
     case homeAction.SET_ACHIEVEMENT:
       return { ...state, achievement: data };

@@ -9,5 +9,10 @@ const fetchCommunity = () => {
     select: "fields",
   });
 };
-
-export { fetchCommunity };
+const fetchAboutUs = () => {
+  return client.getEntries({
+    content_type: "aboutUs",
+    select: "fields",
+  });
+};
+export { fetchCommunity, fetchAboutUs };

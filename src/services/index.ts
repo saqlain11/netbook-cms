@@ -4,4 +4,4 @@ export {
   fetchFooterLink,
 } from "./layout";
 
-export { fetchCommunity } from "./home";
+export { fetchCommunity, fetchAboutUs } from "./home";
