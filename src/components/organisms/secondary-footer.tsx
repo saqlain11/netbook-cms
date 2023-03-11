@@ -1,14 +1,19 @@
 import { Button, Col, Input, Row, Space, Typography } from "antd";
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import styles from "./secondary-footer.module.scss";
 import STATIC_TEXT from "@netbook/__Fixtures__/ui-static-text";
+import { LayoutContext } from "@netbook/contexts";
 
 const {
   footer: { secondaryFooter },
 } = STATIC_TEXT;
 
 const SecondaryFooter: React.FC = () => {
+  const {
+    layoutState: { staticText },
+  } = useContext(LayoutContext);
+
   return (
     <Row
       justify="space-between"

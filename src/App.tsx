@@ -1,10 +1,10 @@
-import ContentfulClient from "@netbook/contentful-client/client";
-import * as contentful from "contentful";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { BaseLayout, Loader } from "@netbook/components";
 import AOS from "aos";
 
 import { lazy, Suspense } from "react";
+import { fetchHeaderNavigation } from "./services/layout";
+import { LayoutProvider } from "@netbook/contexts";
 
 const Home = lazy(() => import(/* webpackChunkName: 'Home' */ "./pages/home"));
 const NotFound = lazy(
@@ -36,21 +36,17 @@ function App() {
   // You can also pass an optional settings object
   // below listed default settings
 
-  // const client: contentful.ContentfulClientApi = new ContentfulClient().client;
-  // client
-  //   .getEntries({ content_type: "navigation" })
-  //   .then((entry) => console.log(entry))
-  //   .catch(console.error);
-
   return (
     <Router>
       <Suspense fallback={<Loader />}>
-        <Routes>
-          <Route element={<BaseLayout />}>
-            <Route index element={<Home />} />
-            <Route path="*" element={<NotFound />} />
-          </Route>
-        </Routes>
+        <LayoutProvider>
+          <Routes>
+            <Route element={<BaseLayout />}>
+              <Route index element={<Home />} />
+              <Route path="*" element={<NotFound />} />
+            </Route>
+          </Routes>
+        </LayoutProvider>
       </Suspense>
     </Router>
   );
