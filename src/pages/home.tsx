@@ -6,9 +6,8 @@ const Home: React.FC = () => {
       {/* community-banner */}
       <CommunityBanner />
       {/* about-us */}
-      {/*achievement*/}
-
       <AboutUs />
+      {/*achievement*/}
       <Achievement />
     </>
   );

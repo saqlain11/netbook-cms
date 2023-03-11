@@ -1,10 +1,9 @@
 import { Affix, Layout } from "antd";
 import StickyHeader from "./sticky-header";
 import { Outlet } from "react-router-dom";
-import { useContext, useRef } from "react";
+import { useRef } from "react";
 import PrimaryFooter from "./primary-footer";
 import SecondaryFooter from "./secondary-footer";
-import { LayoutContext } from "@netbook/contexts";
 
 const { Content } = Layout;
 

@@ -5,4 +5,8 @@ const parsedEntries = (items: Entry<unknown>[]) => {
     return item.fields;
   });
 };
-export { parsedEntries };
+const parsedEntry = (item: Entry<unknown>[]) => {
+  return item[0].fields;
+};
+
+export { parsedEntries, parsedEntry };

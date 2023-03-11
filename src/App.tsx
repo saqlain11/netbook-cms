@@ -3,8 +3,7 @@ import { BaseLayout, Loader } from "@netbook/components";
 import AOS from "aos";
 
 import { lazy, Suspense } from "react";
-import { fetchHeaderNavigation } from "./services/layout";
-import { LayoutProvider } from "@netbook/contexts";
+import { LayoutProvider, HomeProvider } from "@netbook/contexts";
 
 const Home = lazy(() => import(/* webpackChunkName: 'Home' */ "./pages/home"));
 const NotFound = lazy(
@@ -42,7 +41,15 @@ function App() {
         <LayoutProvider>
           <Routes>
             <Route element={<BaseLayout />}>
-              <Route index element={<Home />} />
+              <Route
+                index
+                element={
+                  <HomeProvider>
+                    <Home />
+                  </HomeProvider>
+                }
+              />
+
               <Route path="*" element={<NotFound />} />
             </Route>
           </Routes>

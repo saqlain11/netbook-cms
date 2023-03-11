@@ -1,9 +1,9 @@
 import { INavigation, IFooterLink, IStaticText } from "@netbook/model/";
 
 export interface ILayoutState {
-  navigation: INavigation | [];
+  navigation: INavigation[];
   staticText: IStaticText | object;
-  footerLink: IFooterLink | [];
+  footerLink: IFooterLink[];
 }
 
 const layoutAction = {
@@ -20,14 +20,11 @@ const layoutInitialState: ILayoutState = {
 
 const layoutReducer = (
   state: ILayoutState,
-  {
-    type,
-    data,
-  }: { type: string; data: INavigation | IStaticText | IFooterLink }
+  { type, data }: { type: string; data: unknown[] }
 ) => {
   switch (type) {
     case layoutAction.SET_STATIC_TEXT:
-      return { ...state, staticText: data };
+      return { ...state, ...data };
 
     case layoutAction.SET_NAVIGATION:
       return { ...state, navigation: data };

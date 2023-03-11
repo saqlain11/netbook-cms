@@ -1,6 +1,9 @@
-[
-  { "label": "Members", "link": "/members" },
-  { "label": "Activity", "link": "/activity" },
-  { "label": "Groups", "link": "/groups" },
-  { "label": "Private Group", "link": "/private-group" }
-]
+{
+  "netbookCommunity": "Netbook community",
+  "netbookSolution": "Your Solutions For Community!",
+  "netbookCommunitySurvey": "More than 2 billion people in over countries use socibook to stay in touch with friends & family",
+  "cta": {
+    "aboutMore": "About More",
+    "inviteFriend": "Invite Friend"
+  }
+}

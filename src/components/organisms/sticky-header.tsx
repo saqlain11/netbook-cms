@@ -19,8 +19,7 @@ const StickyHeader = forwardRef<HTMLDivElement>((_, ref) => {
     layoutState: { navigation, staticText },
   } = useContext(LayoutContext);
 
-  //@todo: need to refactor this
-  const cta = staticText[0]?.staticText?.header?.cta;
+  const cta = staticText?.header?.cta;
   return (
     <div ref={ref}>
       <Header className={`${styles["sticky-header"]} px-135`}>

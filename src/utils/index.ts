@@ -1,1 +1,1 @@
-export { parsedEntries } from "./helpers";
+export { parsedEntries, parsedEntry } from "./helpers";

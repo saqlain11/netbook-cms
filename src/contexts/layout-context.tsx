@@ -8,7 +8,7 @@ import {
   fetchStaticText,
   fetchFooterLink,
 } from "@netbook/services";
-import { parsedEntries } from "@netbook/utils";
+import { parsedEntries, parsedEntry } from "@netbook/utils";
 import { createContext, ReactNode, useEffect, useReducer } from "react";
 
 const LayoutContext = createContext([layoutInitialState, {}, () => undefined]);
@@ -32,7 +32,7 @@ const LayoutProvider = ({ children }: { children: ReactNode }) => {
       });
       dispatch({
         type: layoutAction.SET_STATIC_TEXT,
-        data: parsedEntries(staticTextResponse.items),
+        data: parsedEntry(staticTextResponse.items),
       });
       dispatch({
         type: layoutAction.SET_FOOTER,

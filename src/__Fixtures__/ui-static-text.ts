@@ -54,7 +54,7 @@ const STATIC_TEXT = {
         aboutMore: "About More",
         inviteFriend: "Invite Friend",
       },
-      socializing:Socializing
+      socializing: Socializing,
     },
     aboutUs: {
       whyNetbooks: "Why Netbooks?",

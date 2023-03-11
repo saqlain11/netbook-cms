@@ -1,13 +1,18 @@
 import { Col, Row, Image, Button, Typography, Space } from "antd";
-import React from "react";
+import React, { useContext } from "react";
 import styles from "./community-banner.module.scss";
 import STATIC_TEXT from "@netbook/__Fixtures__/ui-static-text";
+import { HomeContext } from "@netbook/contexts";
 
 const {
-  home: { community },
+  home: { community: staticCommunity },
 } = STATIC_TEXT;
 
 const CommunityBanner: React.FC = () => {
+  const {
+    homeState: { community },
+  } = useContext(HomeContext);
+
   return (
     <Row
       className={`${styles["community-banner"]} px-135`}
@@ -21,7 +26,7 @@ const CommunityBanner: React.FC = () => {
             size="large"
             className={styles["community-button"]}
           >
-            {community.netbookCommunity}
+            {community.netbookCommunity ?? staticCommunity.netbookCommunity}
           </Button>
           <Typography.Title
             data-aos="zoom-in"
@@ -31,7 +36,7 @@ const CommunityBanner: React.FC = () => {
             className={styles["heading"]}
             level={1}
           >
-            {community.netbookSolution}
+            {community.netbookSolution ?? staticCommunity.netbookSolution}
           </Typography.Title>
 
           <Typography.Text
@@ -39,15 +44,16 @@ const CommunityBanner: React.FC = () => {
             data-aos="zoom-out"
             type="secondary"
           >
-            {community.netbookCommunitySurvey}
+            {community.netbookCommunitySurvey ??
+              staticCommunity.netbookCommunitySurvey}
           </Typography.Text>
         </Space>
         <Space className="my-80">
           <Button type="primary" size="large">
-            {community.cta.aboutMore}
+            {community?.cta?.aboutMore ?? staticCommunity.cta.aboutMore}
           </Button>
           <Button size="large" className={styles["community-invite"]}>
-            {community.cta.inviteFriend}
+            {community?.cta?.inviteFriend ?? staticCommunity.cta.inviteFriend}
           </Button>
         </Space>
       </Col>
@@ -64,7 +70,7 @@ const CommunityBanner: React.FC = () => {
             data-aos-once="true"
             data-aos-anchor-placement="top-center"
             alt="socializing"
-            src={community.socializing}
+            src={community.socializing ?? staticCommunity.socializing}
             preview={false}
           />
         </Space>

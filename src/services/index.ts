@@ -3,3 +3,5 @@ export {
   fetchStaticText,
   fetchFooterLink,
 } from "./layout";
+
+export { fetchCommunity } from "./home";

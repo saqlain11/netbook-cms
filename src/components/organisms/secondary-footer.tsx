@@ -19,10 +19,9 @@ const SecondaryFooter: React.FC = () => {
   const {
     layoutState: { staticText, footerLink },
   } = useContext(LayoutContext);
-  console.log("footerLink", footerLink);
 
   const subscribeNewsLetter =
-    staticText[0]?.staticText?.footer?.secondaryFooter.subscribeNewsLetter;
+    staticText?.footer?.secondaryFooter.subscribeNewsLetter;
 
   return (
     <Row
