@@ -1,19 +1,6 @@
-{
-  "header": {
-    "cta": {
-      "login": "Login"
-    }
-  },
-
-  "footer": {
-    "secondaryFooter": {
-      "SubscribeNewsLetter": {
-        "subscriptionHeading": "Subscribe Cirkle Newsletter",
-        "subscriptionDescription": "Subscribe to be the first one to know about updates.<br /> Enter your email",
-        "cta": {
-          "submit": "Submit"
-        }
-      }
-    }
-  }
-}
+[
+  { "label": "Members", "link": "/members" },
+  { "label": "Activity", "link": "/activity" },
+  { "label": "Groups", "link": "/groups" },
+  { "label": "Private Group", "link": "/private-group" }
+]

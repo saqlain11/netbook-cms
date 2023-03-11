@@ -7,14 +7,20 @@ const fetchHeaderNavigation = () => {
   return client.getEntries({
     content_type: "navigation",
     select: "fields",
-    order:"fields.key"
+    order: "fields.key",
   });
 };
 const fetchStaticText = () => {
   return client.getEntries({
     content_type: "staticText",
     select: "fields",
-    
   });
 };
-export { fetchHeaderNavigation, fetchStaticText };
+const fetchFooterLink = () => {
+  return client.getEntries({
+    content_type: "footerLink",
+    select: "fields",
+    order: "fields.id",
+  });
+};
+export { fetchHeaderNavigation, fetchStaticText, fetchFooterLink };

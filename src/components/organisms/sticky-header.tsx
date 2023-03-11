@@ -9,16 +9,18 @@ import { LayoutContext } from "@netbook/contexts";
 import { INavigation } from "@netbook/model";
 
 const {
-  header: { navigation: staticNavigation, cta },
+  header: { navigation: staticNavigation, cta: staticCTA },
 } = STATIC_TEXT;
 
 const { Header } = Layout;
 const StickyHeader = forwardRef<HTMLDivElement>((_, ref) => {
+  //@todo: have to remove these error in ts
   const {
     layoutState: { navigation, staticText },
   } = useContext(LayoutContext);
 
-  const header = staticText[0]?.staticText.header;
+  //@todo: need to refactor this
+  const cta = staticText[0]?.staticText?.header?.cta;
   return (
     <div ref={ref}>
       <Header className={`${styles["sticky-header"]} px-135`}>
@@ -32,17 +34,22 @@ const StickyHeader = forwardRef<HTMLDivElement>((_, ref) => {
                 className={`${styles["header-nav"]} ml-16`}
                 mode="horizontal"
                 defaultSelectedKeys={["1"]}
-                items={navigation.map((nav: INavigation) => {
-                  return {
-                    key: nav.key,
-                    label: (
-                      <Link className={styles["header-nav-link"]} to={nav.link}>
-                        {nav.label}
-                      </Link>
-                    ),
-                    children: nav.children,
-                  };
-                })}
+                items={(navigation || staticNavigation).map(
+                  (nav: INavigation) => {
+                    return {
+                      key: nav.key,
+                      label: (
+                        <Link
+                          className={styles["header-nav-link"]}
+                          to={nav.link}
+                        >
+                          {nav.label}
+                        </Link>
+                      ),
+                      children: nav.children,
+                    };
+                  }
+                )}
               />
             </Space>
           </Col>
@@ -54,7 +61,7 @@ const StickyHeader = forwardRef<HTMLDivElement>((_, ref) => {
                 placeholder="Search here"
               />
               <Button size="large" type="primary">
-                {header?.cta.login ?? cta.login}
+                {cta?.login ?? staticCTA.login}
               </Button>
             </Space>
           </Col>

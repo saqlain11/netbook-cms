@@ -102,7 +102,7 @@ const STATIC_TEXT = {
 
   footer: {
     secondaryFooter: {
-      SubscribeNewsLetter: {
+      subscribeNewsLetter: {
         subscriptionHeading: "Subscribe Cirkle Newsletter",
         subscriptionDescription:
           "Subscribe to be the first one to know about updates.",

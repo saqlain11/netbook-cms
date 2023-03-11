@@ -1,1 +1,5 @@
-export { fetchHeaderNavigation } from "./layout";
+export {
+  fetchHeaderNavigation,
+  fetchStaticText,
+  fetchFooterLink,
+} from "./layout";

@@ -4,51 +4,63 @@ import { Link } from "react-router-dom";
 import styles from "./secondary-footer.module.scss";
 import STATIC_TEXT from "@netbook/__Fixtures__/ui-static-text";
 import { LayoutContext } from "@netbook/contexts";
+import { IFooterLink } from "@netbook/model";
 
 const {
   footer: {
-    secondaryFooter: { footerLink, SubscribeNewsLetter },
+    secondaryFooter: {
+      footerLink: staticFooterLink,
+      subscribeNewsLetter: staticSubscribeNewsLetter,
+    },
   },
 } = STATIC_TEXT;
 
 const SecondaryFooter: React.FC = () => {
   const {
-    layoutState: { staticText },
+    layoutState: { staticText, footerLink },
   } = useContext(LayoutContext);
-const footer=staticText[0]?.staticText.footer
-console.log("footer",footer);
+  console.log("footerLink", footerLink);
+
+  const subscribeNewsLetter =
+    staticText[0]?.staticText?.footer?.secondaryFooter.subscribeNewsLetter;
+
   return (
     <Row
       justify="space-between"
       className={`${styles["secondary-footer"]} py-80 px-135`}
     >
-      {footerLink.map((link, index) => (
-        <Col key={index}>
-          <Space direction="vertical">
-            <Typography.Paragraph className={styles["link-label"]}>
-              {link.label}
-            </Typography.Paragraph>
-            {link.subLink.map((sub, index) => (
-              <Link key={index} to={sub.link} className={`${styles["link"]}`}>
-                {sub.label}
-              </Link>
-            ))}
-          </Space>
-        </Col>
-      ))}
+      {(footerLink || staticFooterLink).map(
+        (link: IFooterLink, index: number) => (
+          <Col key={index}>
+            <Space direction="vertical">
+              <Typography.Paragraph className={styles["link-label"]}>
+                {link.label}
+              </Typography.Paragraph>
+              {link.subLink.map((sub, index) => (
+                <Link key={index} to={sub.link} className={`${styles["link"]}`}>
+                  {sub.label}
+                </Link>
+              ))}
+            </Space>
+          </Col>
+        )
+      )}
       <Col span={9}>
         <Space direction="vertical">
           <Typography.Paragraph
             className={`${styles["subscription-heading"]} m-none`}
           >
-            {footer?.SubscribeNewsLetter?.subscriptionHeading?? SubscribeNewsLetter.subscriptionHeading}
+            {subscribeNewsLetter?.subscriptionHeading ??
+              staticSubscribeNewsLetter.subscriptionHeading}
           </Typography.Paragraph>
           <Typography.Paragraph
             className={`${styles["subscription-text"]} my-16`}
           >
-            {footer?.SubscribeNewsLetter?.subscriptionDescription ?? SubscribeNewsLetter.subscriptionDescription}
+            {subscribeNewsLetter?.subscriptionDescription ??
+              staticSubscribeNewsLetter.subscriptionDescription}
             <br />
-            {footer?.SubscribeNewsLetter?.subscriptionEmail ?? SubscribeNewsLetter.subscriptionEmail}
+            {subscribeNewsLetter?.subscriptionEmail ??
+              staticSubscribeNewsLetter.subscriptionEmail}
           </Typography.Paragraph>
           <Input.Group compact>
             <Input
@@ -56,7 +68,10 @@ console.log("footer",footer);
               size="large"
               placeholder="Email Address"
             />
-            <Button size="large">{SubscribeNewsLetter.cta.submit}</Button>
+            <Button size="large">
+              {subscribeNewsLetter?.cta.submit ??
+                staticSubscribeNewsLetter.cta.submit}
+            </Button>
           </Input.Group>
         </Space>
       </Col>
