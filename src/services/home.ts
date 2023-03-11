@@ -15,4 +15,10 @@ const fetchAboutUs = () => {
     select: "fields",
   });
 };
-export { fetchCommunity, fetchAboutUs };
+const fetchAchievement = () => {
+  return client.getEntries({
+    content_type: "achievement",
+    select: "fields",
+  });
+};
+export { fetchCommunity, fetchAboutUs, fetchAchievement };

@@ -30,10 +30,10 @@ const AboutUs: React.FC = () => {
       >
         <Space direction="vertical">
           <Typography.Text className={styles["why-netbook"]}>
-            {aboutUs.whyNetbooks}
+            {aboutUs?.whyNetbooks ?? staticAboutUs.whyNetbooks}
           </Typography.Text>
           <Typography.Title level={2} className="m-none">
-            {aboutUs.joinNetbook}
+            {aboutUs.joinNetbook ?? staticAboutUs.joinNetbook}
           </Typography.Title>
           <Typography.Paragraph type="secondary">
             {aboutUs.netbookSurvey}
@@ -67,7 +67,7 @@ const AboutUs: React.FC = () => {
               className={styles["netbook-asset"]}
               width="100%"
               height="400px"
-              src={aboutUs.ourIntro ?? staticAboutUs.netbookSharing}
+              src={aboutUs.ourIntro ?? staticAboutUs.ourIntro}
             />
           </Col>
           <Col

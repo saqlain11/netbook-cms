@@ -24,15 +24,10 @@ const homeReducer = (
   { type, data }: { type: string; data: unknown[] }
 ) => {
   switch (type) {
+    case homeAction.SET_ABOUT_US:
+    case homeAction.SET_ACHIEVEMENT:
     case homeAction.SET_COMMUNITY:
       return { ...state, ...data };
-
-    case homeAction.SET_ABOUT_US:
-      return { ...state, ...data };
-
-    case homeAction.SET_ACHIEVEMENT:
-      return { ...state, achievement: data };
-
     default:
       return state;
   }

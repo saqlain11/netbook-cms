@@ -33,7 +33,7 @@ const StickyHeader = forwardRef<HTMLDivElement>((_, ref) => {
                 className={`${styles["header-nav"]} ml-16`}
                 mode="horizontal"
                 defaultSelectedKeys={["1"]}
-                items={(navigation || staticNavigation).map(
+                items={(navigation.length ? navigation : staticNavigation).map(
                   (nav: INavigation) => {
                     return {
                       key: nav.key,

@@ -1,9 +1,32 @@
 {
-  "whyNetbooks": "Why Netbooks?",
-  "joinNetbook": "Why Join to Netbook Social Network?",
-  "netbookSurvey": "Recent surveys have indicated that small businesses recognise the need they have to connect with consumer.",
-  "netbookSharing": ["Groups", "Messages", "Share"],
-  "ourIntro": "https://www.youtube.com/embed/ML9EMYggyEE",
-  "AboutImageOne": "https://images.ctfassets.net/0hdacipw488j/685TGzkl8FlDDK%E2%80%A65dd60e594b2495592f5c62fe8b19a6/about-us-img-1.png",
-  "aboutImageTwo": "https://images.ctfassets.net/0hdacipw488j/685TGzkl8FlDDK%E2%80%A65dd60e594b2495592f5c62fe8b19a6/about-us-img-2.png"
+  "rating": {
+    "noOfRating": "4.8 Rating",
+    "users": [
+      "https://joesch.moe/api/v1/random?key=1",
+      "https://joesch.moe/api/v1/random?key=2",
+      "https://joesch.moe/api/v1/random?key=3"
+    ],
+    "noOfMembers": "+836k",
+    "members": "Members",
+    "ratingDescription": "More than 2 billion we people over countries use socibooks we to stay in touch with friends.",
+    "cta": {
+      "joinCommunity": "Join Our Community"
+    }
+  },
+  "rewards": {
+    "title": "Awwwards",
+    "best": "Best of",
+    "years": "2021",
+    "members": "Members",
+    "awardsDescription": "More than 2 billion we people over countries use socibooks we to stay in touch with friends.",
+    "cta": { "goToAwards": "Go To Awards" }
+  },
+  "ourAchievement": {
+    "title": "Our Achievement",
+    "connectingDetail": "We are Connecting You The Digital Life.",
+    "scopeOfMedia": "The scope the Social Media becomes crucial Is helps the business to directly engage with their needs and wants.",
+    "cta": {
+      "discoverMe": "Discover me"
+    }
+  }
 }

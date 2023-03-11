@@ -28,7 +28,7 @@ const SecondaryFooter: React.FC = () => {
       justify="space-between"
       className={`${styles["secondary-footer"]} py-80 px-135`}
     >
-      {(footerLink || staticFooterLink).map(
+      {(footerLink.length ? footerLink : staticFooterLink).map(
         (link: IFooterLink, index: number) => (
           <Col key={index}>
             <Space direction="vertical">
