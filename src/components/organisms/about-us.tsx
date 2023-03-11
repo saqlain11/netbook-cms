@@ -82,7 +82,7 @@ const AboutUs: React.FC = () => {
               <Image
                 alt="laptop"
                 className={styles["about-image-banner"]}
-                src={aboutUs.AboutImageOne}
+                src={aboutUs.aboutImageOne}
                 preview={false}
               />
               <Image
