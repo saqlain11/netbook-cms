@@ -1,4 +1,3 @@
-import Socializing from "@netbook/assets/socializing.png";
 import { Col, Row, Image, Button, Typography, Space } from "antd";
 import React from "react";
 import styles from "./community-banner.module.scss";
@@ -65,7 +64,7 @@ const CommunityBanner: React.FC = () => {
             data-aos-once="true"
             data-aos-anchor-placement="top-center"
             alt="socializing"
-            src={Socializing}
+            src={community.socializing}
             preview={false}
           />
         </Space>

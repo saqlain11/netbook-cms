@@ -4,6 +4,8 @@ import Facebook from "@netbook/assets/facebook.svg";
 import Instagram from "@netbook/assets/instagram.svg";
 import Linkedin from "@netbook/assets/linkedin.svg";
 import Twitter from "@netbook/assets/twitter.svg";
+import Socializing from "@netbook/assets/socializing.png";
+
 const STATIC_TEXT = {
   header: {
     cta: {
@@ -52,6 +54,7 @@ const STATIC_TEXT = {
         aboutMore: "About More",
         inviteFriend: "Invite Friend",
       },
+      socializing:Socializing
     },
     aboutUs: {
       whyNetbooks: "Why Netbooks?",
