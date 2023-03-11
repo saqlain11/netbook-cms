@@ -63,7 +63,7 @@ const STATIC_TEXT = {
         "Recent surveys have indicated that small businesses recognise the need they have to connect with consumer.",
       netbookSharing: ["Groups", "Messages", "Share"],
       ourIntro: "https://www.youtube.com/embed/ML9EMYggyEE",
-      AboutImageOne: Laptop,
+      aboutImageOne: Laptop,
       aboutImageTwo: Cable,
     },
     achievement: {
