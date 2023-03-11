@@ -105,7 +105,8 @@ const STATIC_TEXT = {
       SubscribeNewsLetter: {
         subscriptionHeading: "Subscribe Cirkle Newsletter",
         subscriptionDescription:
-          "Subscribe to be the first one to know about updates.<br /> Enter your email",
+          "Subscribe to be the first one to know about updates.",
+        subscriptionEmail: "Enter your email",
         cta: {
           submit: "Submit",
         },
