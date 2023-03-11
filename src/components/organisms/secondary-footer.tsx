@@ -5,7 +5,9 @@ import styles from "./secondary-footer.module.scss";
 import STATIC_TEXT from "@netbook/__Fixtures__/ui-static-text";
 
 const {
-  footer: { secondaryFooter },
+  footer: {
+    secondaryFooter: { footerLink, SubscribeNewsLetter },
+  },
 } = STATIC_TEXT;
 
 const SecondaryFooter: React.FC = () => {
@@ -14,7 +16,7 @@ const SecondaryFooter: React.FC = () => {
       justify="space-between"
       className={`${styles["secondary-footer"]} py-80 px-135`}
     >
-      {secondaryFooter.footerLink.map((link, index) => (
+      {footerLink.map((link, index) => (
         <Col key={index}>
           <Space direction="vertical">
             <Typography.Paragraph className={styles["link-label"]}>
@@ -33,13 +35,14 @@ const SecondaryFooter: React.FC = () => {
           <Typography.Paragraph
             className={`${styles["subscription-heading"]} m-none`}
           >
-            Subscribe Cirkle Newsletter
+            {SubscribeNewsLetter.subscriptionHeading}
           </Typography.Paragraph>
           <Typography.Paragraph
             className={`${styles["subscription-text"]} my-16`}
           >
-            Subscribe to be the first one to know about updates.
-            <br /> Enter your email
+            {SubscribeNewsLetter.subscriptionDescription}
+            <br />
+            {SubscribeNewsLetter.subscriptionEmail}
           </Typography.Paragraph>
           <Input.Group compact>
             <Input
@@ -47,7 +50,7 @@ const SecondaryFooter: React.FC = () => {
               size="large"
               placeholder="Email Address"
             />
-            <Button size="large">Submit</Button>
+            <Button size="large">{SubscribeNewsLetter.cta.submit}</Button>
           </Input.Group>
         </Space>
       </Col>

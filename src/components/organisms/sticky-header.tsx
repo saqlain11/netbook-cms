@@ -12,7 +12,6 @@ const {
 
 const { Header } = Layout;
 const StickyHeader = forwardRef<HTMLDivElement>((_, ref) => {
-
   return (
     <div ref={ref}>
       <Header className={`${styles["sticky-header"]} px-135`}>
